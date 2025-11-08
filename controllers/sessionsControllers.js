@@ -1,15 +1,3 @@
-/**
- * The above code includes functions for creating a session with a unique ID and retrieving sessions
- * from a database.
- * @param req - `req` is the request object, which contains information about the HTTP request made by
- * the client to the server. It includes details such as the request headers, parameters, body, URL,
- * and more. In the provided code snippets, `req` is used to access parameters sent in the request,
- * @param res - The `res` parameter in the functions `httpPostSession` and `httpGetSession` stands for
- * the response object in Express.js. It is used to send a response back to the client making the HTTP
- * request. The response object has methods like `res.status()` to set the HTTP status code
- * @returns The code provided includes two functions for handling HTTP requests related to creating and
- * retrieving sessions.
- */
 import LiveSession from '../models/liveSessionSchema.js'
 import { v4 as uuidv4 } from 'uuid'
 
@@ -75,7 +63,7 @@ export async function httpGetSession(req, res) {
 
     } catch (error) {
         res.status(500).json({
-            message: err.message,
+            message: error.message,
             success: false
         });
     }
