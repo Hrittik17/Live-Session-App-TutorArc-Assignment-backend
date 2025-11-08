@@ -1,3 +1,8 @@
+/**
+ * The above code sets up a Node.js server using Express, connects to a MongoDB database using
+ * Mongoose, and defines routes for sessions.
+ */
+
 import http from 'http';
 import express from 'express';
 import morgan from 'morgan';
@@ -20,6 +25,7 @@ app.use(cors({
     methods:['GET','POST','PATCH','DELETE']
 }))
 
+// our router for sessions
 app.use(sessionRouter)
 
 // error handling middlewares
