@@ -18,7 +18,7 @@ export async function httpPostSession(req, res) {
     try {
         // create a uniqueId
         const uniqueId = uuidv4()
-        const userurl = `http://localhost:5173/session/${uniqueId}`;
+        const userurl = `https://live-session-app-tutor-arc-assignme-seven.vercel.app/session/${uniqueId}`;
 
         // create a session
         const session = await LiveSession.create({
