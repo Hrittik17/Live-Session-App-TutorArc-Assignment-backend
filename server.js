@@ -21,7 +21,7 @@ const PORT = process.env.PORT
 app.use(express.json())
 app.use(morgan('dev'))
 app.use(cors({
-    origin:['http://localhost:5173','https://live-session-app-tutor-arc-assignme-seven.vercel.app/'],
+    origin:['http://localhost:5173','https://live-session-app-tutor-arc-assignme-seven.vercel.app'],
     methods:['GET','POST','PATCH','DELETE']
 }))
 
